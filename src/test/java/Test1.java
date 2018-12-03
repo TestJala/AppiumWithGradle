@@ -48,7 +48,7 @@ public class Test1 {
 
         if(driver.getCurrentPackage().contains("com.fti.surefleet.fuel2.android")) {
             WebElement message = driver.findElement(By.id("com.fti.surefleet.fuel2.android:id/dialogMessageId"));
-            String messageText = message.getText();
+            String messageText = message.getAttribute("text");
             String expectedMessage = "Username or Password are incorrect";
             Assert.assertEquals(messageText, expectedMessage);
         }
